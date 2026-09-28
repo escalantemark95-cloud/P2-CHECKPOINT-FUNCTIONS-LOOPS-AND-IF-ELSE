@@ -1,0 +1,26 @@
+students = int(input("How many students?: "))
+
+def calculate_average(a1, a2, a3):
+    return (a1 + a2 + a3) / 3
+
+for i in range(1,students + 1):
+    
+    print("Student", i)
+    name = input("Enter name: ")
+    act1 = float(input("Activity 1: "))
+    act2 = float(input("Activity 2: "))
+    act3 = float(input("Activity 3: "))
+
+    average = calculate_average(act1, act2, act3)
+
+    if average >= 75:
+        status = "Passed"
+    elif average >= 80:
+        status = "Very Good"
+    elif average >= 90:
+        status = "Excellent"
+    else:
+        status = "Failed"
+
+    print("Average:", average)
+    print("Status:", status)
